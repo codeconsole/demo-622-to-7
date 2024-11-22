@@ -11,12 +11,8 @@ buildscript {
 
 plugins {
     id "groovy"
-    id "com.github.erdi.webdriver-binaries" version "3.2"
-    id "war"
-    id "idea"
     id "com.bertramlabs.asset-pipeline" version "4.5.1"
     id "application"
-    id "eclipse"
 }
 
 // Not Published to Gradle Plugin Portal
@@ -55,7 +51,6 @@ dependencies {
     runtimeOnly "com.bertramlabs.plugins:asset-pipeline-grails:4.5.1"
     runtimeOnly "com.h2database:h2"
     runtimeOnly "org.apache.tomcat:tomcat-jdbc"
-    runtimeOnly "org.fusesource.jansi:jansi:1.18"
     implementation "org.grails.plugins:spring-security-core:6.1.1"
     implementation "org.grails.plugins:async"
 }
