@@ -4,14 +4,14 @@ buildscript {
         mavenCentral()
     }
     dependencies { // Not Published to Gradle Plugin Portal
-        classpath "org.grails:grails-gradle-plugin:6.2.3"
-        classpath "org.grails.plugins:hibernate5:8.1.0"
+        classpath "org.grails:grails-gradle-plugin:7.0.0-SNAPSHOT"
+        classpath "org.grails.plugins:hibernate5:9.0.0-SNAPSHOT"
     }
 }
 
 plugins {
     id "groovy"
-    id "com.bertramlabs.asset-pipeline" version "4.5.1"
+    id "com.bertramlabs.asset-pipeline" version "5.0.1"
     id "application"
 }
 
@@ -46,13 +46,14 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-logging"
     implementation "org.springframework.boot:spring-boot-starter-tomcat"
     implementation "org.springframework.boot:spring-boot-starter-validation"
-    compileOnly "io.micronaut:micronaut-inject-groovy"
     console "org.grails:grails-console"
-    runtimeOnly "com.bertramlabs.plugins:asset-pipeline-grails:4.5.1"
+    runtimeOnly "com.bertramlabs.plugins:asset-pipeline-grails:5.0.1"
     runtimeOnly "com.h2database:h2"
     runtimeOnly "org.apache.tomcat:tomcat-jdbc"
-    implementation "org.grails.plugins:spring-security-core:6.1.1"
+    runtimeOnly "org.fusesource.jansi:jansi"
+    implementation "org.grails.plugins:spring-security-core:7.0.0-SNAPSHOT"
     implementation "org.grails.plugins:async"
+    implementation "org.grails.plugins:events"
 }
 
 application {
@@ -60,5 +61,5 @@ application {
 }
 
 java {
-    sourceCompatibility = JavaVersion.toVersion("17")
+    sourceCompatibility = JavaVersion.toVersion("21")
 }
